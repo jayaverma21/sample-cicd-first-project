@@ -1,4 +1,3 @@
-# sample-cicd-first-project
 # Flask Application with CI/CD Pipeline
 
 This repository contains a simple Flask application that returns a "Hello World" message. The project includes a **CI/CD pipeline** set up with **Azure DevOps** to automate the build and deployment process to **Azure App Service**.
