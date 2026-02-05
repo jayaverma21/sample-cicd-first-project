@@ -23,5 +23,5 @@ To run the project locally, follow the steps below:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://your-repository-url.git
-   cd your-repository-name
+   git clone https://github.com/jayaverma21/sample-cicd-first-project.git
+   cd sample-cicd-first-project.git
