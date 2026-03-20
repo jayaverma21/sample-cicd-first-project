@@ -1,76 +1,40 @@
-# Flask Azure DevOps Deployment
+# Flask Azure App Service Deployment with Azure DevOps
 
-This repository contains a Flask web application that is deployed to code base azure App Service using an Azure DevOps YAML pipeline.
+This project demonstrates how to deploy a Flask web application to code base Azure App Service using an Azure DevOps YAML pipeline. The pipeline automates the process of installing dependencies, packaging the application, and preparing it for deployment using a ZIP-based approach. This showcases a simple and effective CI/CD workflow for Python web applications without using containers.
 
-##  Project Overview
+---
 
-- 🐍 Backend: Flask (Python)
-- ☁️ Cloud Platform: Azure App Service
-- 🔄 CI/CD: Azure DevOps YAML Pipeline
+# Features
++ Flask Web Application: Lightweight Python web framework for building the app.
++ Azure DevOps CI/CD: Automates build and deployment using YAML pipeline.
++ ZIP-Based Deployment: Packages the application into a ZIP file for deployment.
++ Automated Dependency Installation: Installs required Python packages during pipeline execution.
++ Cloud Deployment: Deploys application to Azure App Service.
++ Simple Architecture: No Docker or containerization required.
 
-The project demonstrates how to automate the deployment of a Flask application using a YAML-based pipeline in Azure DevOps.
+---
 
-## 📂 Project Structure
-.
-├── app.py
-├── requirements.txt
-├── azure-pipelines.yml
-└── README.md
+# Requirements
++ Python 3.x  
++ Flask  
++ Azure DevOps account  
++ Azure Subscription  
++ Azure App Service  
 
+---
 
-## ⚙️ Setup Instructions
-
-### 1. Clone the Repository
-
+# Installation
 ```bash
-git clone https://github.com/your-username/flask-azure-devops-deployment.git
-cd flask-azure-devops-deployment
-2. Create Virtual Environment
-python -m venv venv
-source venv/bin/activate   # For Linux/Mac
-venv\Scripts\activate      # For Windows
-3. Install Dependencies
 pip install -r requirements.txt
-4. Run the Application Locally
-python app.py
 
-App will run on:
+# Pipeline Explanation
++ The Azure DevOps pipeline (azure-pipelines.yml) performs the following steps:
++ Setsup Python Environment: Uses a specified Python version on the build agent.
++ Installs Dependencies: Creates a virtual environment and installs required packages.
++ Archives Application: Compresses the project files into a ZIP file.
++ Publishes Artifact: Stores the ZIP file as a build artifact for deployment.
 
-http://localhost:5000
-🔄 CI/CD Pipeline
+# Deployment Type
 
-This project uses an Azure DevOps YAML pipeline (azure-pipelines.yml) to:
-
-Install dependencies
-
-Build the Flask app
-
-Deploy to Azure App Service
-
-☁️ Deployment
-
-The deployment is automated via Azure DevOps pipeline:
-
-Code is pushed to the repository
-
-Pipeline is triggered automatically
-
-Application is deployed to Azure App Service
-
-📌 Requirements
-
-Python 3.x
-
-Azure DevOps account
-
-Azure subscription
-
-📖 Notes
-
-Make sure to configure your Azure service connection in Azure DevOps.
-
-Update the azure-pipelines.yml file with your App Service name and subscription details.
-
-🤝 Contributing
-
-Feel free to fork this repository and submit pull requests.
++ Code-Based Deployment: Uses ZIP package deployment to Azure App Service.
++ Not Container-Based: No Docker image or container is used in this project.
